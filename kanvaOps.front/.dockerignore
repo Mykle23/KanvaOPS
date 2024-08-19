@@ -1,0 +1,43 @@
+# Ignorar node_modules
+node_modules
+**/node_modules
+
+# Ignorar dependencias instaladas localmente por npm o yarn
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Ignorar las carpetas de salida de Angular
+dist
+out-tsc
+
+# Ignorar los archivos de configuración de Angular creados por el entorno de desarrollo
+.angular
+
+# Ignorar archivos de configuración de entornos específicos que no se necesitan en la imagen de producción
+.env
+.env.*.local
+
+# Ignorar archivos relacionados con pruebas y herramientas de desarrollo
+coverage
+karma.conf.js
+karma.conf.*.js
+protractor.conf.js
+protractor.conf.*.js
+
+# Ignorar otros archivos y carpetas que no son necesarios para la construcción
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+.editorconfig
+.vscode/
+.idea/
+*.iml
+.sass-cache
+*.log
+*.swp
+.DS_Store
+Thumbs.db
