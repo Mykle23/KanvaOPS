@@ -53,3 +53,12 @@
   font-weight: bold;
   font-size: 14px;
 }
+
+form {
+  /* all: unset; */
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+

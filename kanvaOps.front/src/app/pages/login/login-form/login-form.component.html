@@ -3,9 +3,16 @@
     <span>Trello</span>
 </div>
 <p class="login-continue">Inicia sesión para continuar</p>
-<input placeholder="Introduce tu correo electrónico" />
-<br>
-<button>Continuar</button>
+<form>
+    <input placeholder="Introduce tu correo electrónico"
+        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
+        #email type="email" />
+    <input class="hidden" placeholder="Introducir contraseña" type="password"
+        #password />
+
+    <button (click)="checkEmail(email,$event,password)"
+        type="submit">{{buttonTitle}}</button>
+</form>
 <p class="continue">O continúa con:</p>
 <div class="buttons-container">
 
