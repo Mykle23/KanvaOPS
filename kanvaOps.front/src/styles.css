@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Roboto", sans-serif;
+  --main-font-color: rgb(23, 43, 77);
+  --a-link: rgb(12 102 228);
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--a-link);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border-radius: 3px;
+  padding: 0.5rem 8px;
+  box-sizing: border-box;
+  outline: 1px solid #7a869a;
+  border: none;
+  width: 100%;
+}
+input:focus {
+  outline: 1px solid #388bff;
+  box-shadow: inset 0 0 0 1px #388bff;
+  /* border: 1px solid #388BFF; */
+}
+
+button {
+  background-color: #0052cc;
+  color: white;
+  border-width: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 100%;
+  padding: 0px 10px;
+  width: 100%;
+  justify-content: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.isDisabled > a {
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
