@@ -2,6 +2,16 @@
 * {
   font-family: "Roboto", sans-serif;
   --main-font-color: rgb(23, 43, 77);
+  --a-link: rgb(12 102 228);
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--a-link);
+}
+a:hover {
+  text-decoration: underline;
 }
 
 input {
@@ -37,3 +47,13 @@ button {
   display: none;
 }
 
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.isDisabled > a {
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
