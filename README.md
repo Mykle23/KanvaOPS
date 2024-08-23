@@ -10,23 +10,30 @@
 
 Bienvenidos al proyecto **KanvaOPS**. Este proyecto tiene como objetivo replicar la funcionalidad de la popular herramienta de gestión de proyectos, Trello, tanto en su frontend como en su API. El proyecto está estructurado como un monorepo, lo que facilita la gestión del código y permite un flujo de trabajo ágil y colaborativo.
 
+> **Nota:** El **código** del proyecto debe de estar escrito en **inglés**, en cambio la **aplicación web** que consumiran los usuarios estará en **español**.
+
 ## 📌 Tabla de Contenidos
 
-- [📦 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🛠️ Requisitos Previos](#️-requisitos-previos)
-- [🚀 Ejecución del Proyecto](#-ejecución-del-proyecto)
-  - [🌐 API](#-api)
-  - [🖥️ Frontend](#️-frontend)
-  - [🗄️ Base de Datos](#️-base-de-datos)
-- [🐳 Despliegue en Desarrollo con Docker Compose](#-despliegue-en-desarrollo-con-docker-compose)
-- [🧪 Testing](#-testing)
-  - [🌐 API](#-api-1)
-  - [🖥️ Frontend](#%EF%B8%8F-frontend-1)
-- [🗂️ Gestión del Proyecto](#️-gestión-del-proyecto)
-- [🌳 Estrategia de Ramas en Git](#-estrategia-de-ramas-en-git)
-- [🔮 Estado y Perspectivas](#-estado-y-perspectivas)
-- [👥 Autores y Colaboradores](#-autores-y-colaboradores)
-- [📜 Licencia](#-licencia)
+- [KanvaOPS](#kanvaops)
+  - [🚀 Descripción del Proyecto](#-descripción-del-proyecto)
+  - [📌 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [📦 Estructura del Proyecto](#-estructura-del-proyecto)
+  - [🛠️ Requisitos Previos](#️-requisitos-previos)
+  - [🚀 Ejecución del Proyecto](#-ejecución-del-proyecto)
+    - [🌐 API](#-api)
+    - [🖥️ Frontend](#️-frontend)
+    - [🗄️ Base de Datos](#️-base-de-datos)
+  - [🐳 Despliegue en Desarrollo con Docker Compose](#-despliegue-en-desarrollo-con-docker-compose)
+  - [🧪 Testing](#-testing)
+    - [🌐 API](#-api-1)
+      - [Ejecuta los tests](#ejecuta-los-tests)
+    - [🖥️ Frontend](#️-frontend-1)
+      - [Ejecuta los tests](#ejecuta-los-tests-1)
+  - [🗂️ Gestión del Proyecto](#️-gestión-del-proyecto)
+  - [🌳 Estrategia de Ramas en Git](#-estrategia-de-ramas-en-git)
+  - [🔮 Estado y Perspectivas](#-estado-y-perspectivas)
+  - [👥 Autores y Colaboradores](#-autores-y-colaboradores)
+  - [📜 Licencia](#-licencia)
 
 ---
 
