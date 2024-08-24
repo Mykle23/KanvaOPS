@@ -1,1 +1,6 @@
-<p>board-header works!</p>
+<div class="header-container">
+  <div class="title-container">
+    <h1 #titleComponent (click)="onTitleClick(titleComponent, newTitle)" class="title">{{boardTitle}}</h1>
+    <input #newTitle (input)="autoSize(newTitle)" (blur)="onTitleBlur(titleComponent, newTitle)" class="hidden rename-board-input" type="text"/>
+  </div>
+</div>
