@@ -37,7 +37,7 @@
   white-space: nowrap;
 }
 
-.title-container {
+.container {
   display: inline-flex;
   position: relative;
   max-width: 100%;
@@ -48,10 +48,30 @@
   line-height: 32px;
   white-space: nowrap;
   cursor: default;
+  align-items: center;
+  min-width: 32px;
+  justify-content: center;
 }
 
-.title-container:hover, .title-container:focus {
+.container:hover,
+.container:focus {
   background-color: rgba(255, 255, 255, 0.2);
   color: var(--main-font-color);
   cursor: pointer;
+}
+
+.favourite {
+  font-size: larger;
+  height: auto;
+  width: auto;
+}
+
+.favourite:hover,
+.favourite:focus {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.container > span {
+  margin: 5px;
 }

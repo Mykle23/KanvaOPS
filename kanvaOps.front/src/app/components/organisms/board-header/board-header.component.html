@@ -1,6 +1,18 @@
 <div class="header-container">
-  <div class="title-container">
+  <div class="container">
     <h1 #titleComponent (click)="onTitleClick(titleComponent, newTitle)" class="title">{{boardTitle}}</h1>
     <input #newTitle (input)="autoSize(newTitle)" (blur)="onTitleBlur(titleComponent, newTitle)" class="hidden rename-board-input" type="text"/>
   </div>
+  <div (click)="onFavourite()" class="container">
+    <mat-icon class="favourite" fontIcon="{{favourite ? 'star' : 'star_outline'}}"/>
+  </div>
+  <div class="container" style="padding: 0 10px;">
+    <mat-icon fontIcon="group"/>
+    <span>Visible para el espacio de trabajo</span>
+  </div>
+  <div class="container" style="padding: 0 10px;">
+    <mat-icon fontIcon="filter_list"/>
+    <span>Filtros</span>
+  </div>
+  <app-separator/>
 </div>
