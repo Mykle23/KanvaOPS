@@ -2,13 +2,21 @@
 * {
   font-family: "Roboto", sans-serif;
   /* font-weight: no se si sera necesario supongo que si; */
-  font-style: no se si sera necesario supongo que si;
-  --main-font-color: rgb(23, 43, 77);
-  --a-link: rgb(12 102 228);
+  /*font-style: no se si sera necesario supongo que si*/
   color: var(--main-font-color);
   box-sizing: border-box; /*para que las cosas no se salgan de los contenedores*/
   margin: 0;
   padding: 0;
+  
+  /*light theme*/
+  /* --main-font-color: rgb(23, 43, 77); */
+  --a-link: rgb(12 102 228);
+  
+  /*dark theme*/
+  --main-font-color: rgb(159 173 188);
+  --primary-color-grey_1: rgb(29 33 37);
+  --primary-color-grey_1-hovered:rgb(166 197 226 / 16%) ;
+
 }
 
 a {
@@ -34,20 +42,27 @@ input:focus {
 }
 
 button {
-  background-color: #0052cc;
-  color: white;
+  /* background-color: #0052cc; */
+  background-color: var(--primary-color-grey_1);
+  /* color: white; */
+  color: var(--main-font-color);
   border-width: 0px;
   border-radius: 3px;
   box-sizing: border-box;
   text-align: center;
   max-width: 100%;
-  padding: 0px 10px;
+  padding: 6px 12px;
   width: 100%;
   justify-content: center;
   display: flex;
-  min-width: fit-content;
+  min-width: max-content;
   height: 100%;
   align-items: center;
+}
+
+button:hover{
+  background-color: var(--primary-color-grey_1-hovered);
+  cursor: pointer;
 }
 
 .hidden {
