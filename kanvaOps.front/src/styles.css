@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   font-family: "Roboto", sans-serif;
+  /* font-weight: no se si sera necesario supongo que si; */
+  font-style: no se si sera necesario supongo que si;
   --main-font-color: rgb(23, 43, 77);
   --a-link: rgb(12 102 228);
   color: var(--main-font-color);
+  box-sizing: border-box; /*para que las cosas no se salgan de los contenedores*/
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -39,8 +44,10 @@ button {
   padding: 0px 10px;
   width: 100%;
   justify-content: center;
-  height: 40px;
-  line-height: 40px;
+  display: flex;
+  min-width: fit-content;
+  height: 100%;
+  align-items: center;
 }
 
 .hidden {
@@ -53,7 +60,7 @@ button {
 }
 .isDisabled > a {
   color: currentColor;
-  display: inline-block;  /* For IE11/ MS Edge bug */
+  display: inline-block; /* For IE11/ MS Edge bug */
   pointer-events: none;
   text-decoration: none;
 }
