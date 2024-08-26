@@ -62,3 +62,7 @@ form {
   width: 100%;
 }
 
+
+.button-submit{
+  line-height: 40px;
+}
