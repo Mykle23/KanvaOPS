@@ -18,6 +18,7 @@ Bienvenidos al proyecto **KanvaOPS**. Este proyecto tiene como objetivo replicar
   - [🚀 Descripción del Proyecto](#-descripción-del-proyecto)
   - [📌 Tabla de Contenidos](#-tabla-de-contenidos)
   - [📦 Estructura del Proyecto](#-estructura-del-proyecto)
+    - [Estructura del código fuente](#estructura-del-código-fuente)
   - [🛠️ Requisitos Previos](#️-requisitos-previos)
   - [🚀 Ejecución del Proyecto](#-ejecución-del-proyecto)
     - [🌐 API](#-api)
@@ -46,6 +47,26 @@ Este proyecto está organizado como un monorepo que incluye las siguientes parte
 - **Base de Datos**: Implementado con **MongoDB** para un almacenamiento de datos escalable. ❓_**Pediente de decidir**_
 - **Despliegue**: Gestionado mediante **Docker** para un entorno de desarrollo y despliegue sencillo y coherente.
 
+### Estructura del código fuente
+
+El proyecto sigue la siguiente estructura de carpetas:
+
+```plaintext
+src/                 # Carpeta raíz del código fuente
+├── assets/          # Recursos estáticos como imágenes, fuentes, etc.
+├── components/      # Contiene las capas del diseño atómico
+│   ├── atoms/       # Bloques básicos de construcción de la interfaz de usuario
+│   ├── molecules/   # Combinaciones de átomos
+│   ├── organisms/   # Componentes más complejos hechos de moléculas
+│   ├── templates/   # Diseños de página que combinan organismos
+│   │   ├── Login    # Plantilla de página para el inicio de sesión
+│   │   ├── Home     # Plantilla de página para la página principal
+├── services/        # Llamadas a la API y funciones de servicios
+├── guards/          # Guardias de ruta para autenticación y autorización
+├── interceptors/    # Interceptores HTTP para modificar solicitudes y respuestas
+├── pipes/           # Formateadores y manipulación de texto
+├── models/          # Interfaces de TypeScript y modelos para estructuras de datos
+```
 ---
 
 ## 🛠️ Requisitos Previos
