@@ -1,6 +1,6 @@
-// src/shared/controllers/BaseController.ts
 import { Request, Response } from 'express';
-import { CrudService } from '../../interfaces/CrudService';
+import { CrudService } from '../interfaces/CrudService';
+
 
 
 export abstract class BaseController<TService extends CrudService<any>> {

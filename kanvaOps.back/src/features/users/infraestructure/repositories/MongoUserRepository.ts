@@ -1,6 +1,6 @@
+import { UserRepository } from '../../../../shared/interfaces/UserRepository';
 import { User } from '../../domain/entities/User';
 import { Email } from '../../domain/value-objects/Email';
-import { UserRepository } from '../../interfaces/UserRepository';
 import { mapToDomain, mapToPersistence } from '../mappers/UserMapper';
 import { UserModel } from '../models/UserModel';
 

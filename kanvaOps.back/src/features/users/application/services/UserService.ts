@@ -1,8 +1,9 @@
 import jwt from 'jsonwebtoken';
+import { CrudService } from '../../../../shared/interfaces/CrudService';
+import { UserRepository } from '../../../../shared/interfaces/UserRepository';
 import { User } from '../../domain/entities/User';
 import { Email } from '../../domain/value-objects/Email';
-import { CrudService } from '../../interfaces/CrudService';
-import { UserRepository } from '../../interfaces/UserRepository';
+
 
 export class UserService implements CrudService<User> {
   constructor(private userRepository: UserRepository) { }

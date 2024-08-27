@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
+import { BaseController } from '../../../../shared/controllers/BaseController';
 import { UserService } from '../../application/services/UserService';
-import { BaseController } from './BaseController';
+
 
 
 export class UserController extends BaseController<UserService> {

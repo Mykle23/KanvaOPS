@@ -1,7 +1,7 @@
 import { Router } from 'express';
+import { authMiddleware } from '../../../../shared/middleware/authMiddleware';
 import { UserService } from '../../application/services/UserService';
 import { UserController } from '../controllers/UserController';
-import { authMiddleware } from '../middleware/authMiddleware';
 import { MongoUserRepository } from '../repositories/MongoUserRepository';
 
 const userRouter = Router();

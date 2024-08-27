@@ -1,5 +1,6 @@
-import { User } from "../domain/entities/User";
-import { Email } from "../domain/value-objects/Email";
+import { User } from "../../features/users/domain/entities/User";
+import { Email } from "../../features/users/domain/value-objects/Email";
+
 
 
 export interface UserRepository {
