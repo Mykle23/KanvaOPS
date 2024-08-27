@@ -2,7 +2,7 @@ import createDebug from 'debug';
 import 'dotenv/config';
 import { createServer } from 'http';
 import { createApp, startApp } from './app.js';
-import { dbConnect } from './tools/db.conect.js';
+import { dbConnect } from './infraestructure/config/dbConnect.js';
 
 const debug = createDebug('KanvaOps:server');
 debug('Starting server');

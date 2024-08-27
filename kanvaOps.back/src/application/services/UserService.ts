@@ -1,9 +1,8 @@
-// src/features/user/application/services/UserService.ts
+import jwt from 'jsonwebtoken';
 import { User } from '../../domain/entities/User';
-import { UserRepository } from '../../interfaces/repositories/UserRepository';
 import { Email } from '../../domain/value-objects/Email';
 import { Password } from '../../domain/value-objects/Password';
-import jwt from 'jsonwebtoken';
+import { UserRepository } from '../../interfaces/repositories/UserRepository';
 
 export class UserService {
   constructor(private userRepository: UserRepository) { }
@@ -15,7 +14,7 @@ export class UserService {
     password: string;
   }): Promise<User> {
     const email = new Email(userData.email);
-    const password = await Password.create(userData.password);
+    const password = await Password.create(userData.password); // Hashea la contraseña
     const user = new User(userData.id, userData.name, email, password);
 
     await this.userRepository.save(user);
@@ -42,8 +41,7 @@ export class UserService {
     }
 
     if (userData.password) {
-      const newPassword = await Password.create(userData.password);
-      user.updatePassword(newPassword);
+      user.updatePassword(userData.password);
     }
 
     await this.userRepository.save(user);
@@ -73,9 +71,7 @@ export class UserService {
       throw new Error('Invalid password');
     }
 
-    const token = jwt.sign({ id: user.id, email: user.getEmail().getValue() }, process.env.JWT_SECRET!, {
-      expiresIn: '1h',
-    });
+    const token = jwt.sign({ id: user.id, email: user.getEmail().getValue(), name: user.name }, process.env.JWT_SECRET!);
 
     return { token };
   }

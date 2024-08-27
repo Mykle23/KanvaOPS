@@ -1,4 +1,3 @@
-
 import { Email } from '../value-objects/Email';
 import { Password } from '../value-objects/Password';
 
@@ -20,6 +19,10 @@ export class User {
 
   updateEmail(newEmail: Email): void {
     this.email = newEmail;
+  }
+
+  async updatePassword(newPassword: string): Promise<void> {
+    this.password = await Password.create(newPassword);
   }
 
   getEmail(): Email {
