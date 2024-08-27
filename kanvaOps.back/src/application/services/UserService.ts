@@ -1,31 +1,18 @@
 import jwt from 'jsonwebtoken';
 import { User } from '../../domain/entities/User';
 import { Email } from '../../domain/value-objects/Email';
-import { Password } from '../../domain/value-objects/Password';
-import { UserRepository } from '../../interfaces/repositories/UserRepository';
+import { CrudService } from '../../interfaces/CrudService';
+import { UserRepository } from '../../interfaces/UserRepository';
 
-export class UserService {
+export class UserService implements CrudService<User> {
   constructor(private userRepository: UserRepository) { }
 
-  async createUser(userData: {
-    id: string;
-    name: string;
-    email: string;
-    password: string;
-  }): Promise<User> {
-    const email = new Email(userData.email);
-    const password = await Password.create(userData.password); // Hashea la contraseña
-    const user = new User(userData.id, userData.name, email, password);
-
-    await this.userRepository.save(user);
-    return user;
+  async create(userData: User): Promise<User> {
+    await this.userRepository.save(userData);
+    return userData;
   }
 
-  async updateUser(id: string, userData: {
-    name?: string;
-    email?: string;
-    password?: string;
-  }): Promise<User | null> {
+  async update(id: string, userData: Partial<{ name: string; email: string; password: string }>): Promise<User | null> {
     const user = await this.userRepository.findById(id);
     if (!user) {
       throw new Error('User not found');
@@ -41,18 +28,18 @@ export class UserService {
     }
 
     if (userData.password) {
-      user.updatePassword(userData.password);
+      await user.updatePassword(userData.password);
     }
 
     await this.userRepository.save(user);
     return user;
   }
 
-  async findUserById(id: string): Promise<User | null> {
+  async findById(id: string): Promise<User | null> {
     return this.userRepository.findById(id);
   }
 
-  async deleteUser(id: string): Promise<void> {
+  async delete(id: string): Promise<void> {
     const user = await this.userRepository.findById(id);
     if (!user) {
       throw new Error('User not found');
@@ -66,7 +53,7 @@ export class UserService {
       throw new Error('User not found');
     }
 
-    const isPasswordValid = await user.getPassword().equals(password);
+    const isPasswordValid = await user.checkPassword(password);
     if (!isPasswordValid) {
       throw new Error('Invalid password');
     }
