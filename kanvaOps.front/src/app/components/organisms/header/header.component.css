@@ -11,8 +11,13 @@
 
 .board-leftSide {
   display: flex;
+  align-items: center;
 }
 
+.back-home{
+  font-weight: bolder;
+  font-size: larger;
+}
 .board-menu {
   display: flex;
 }

@@ -1,0 +1,27 @@
+* {
+  --input-border-grey: rgb(255, 187, 0);
+}
+:host {
+  border-color: var(--input-border-grey);
+  border-width: 1px;
+  border-style: solid;
+  /* border:  solid 1px; */
+  display: flex;
+  min-width: 200px;
+  max-width: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+input {
+  background-color: var(--primary-color-grey_1);
+  outline: none;
+  padding: 0px 0px 0px 32px;
+}

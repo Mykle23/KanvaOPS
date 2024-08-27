@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-expandable-button',
@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <button>
-      <span>Espacio de trabajo</span>
-      <span>></span>
+      <ng-content></ng-content>
     </button>
   `,
   styleUrl: './expandable-button.component.css',
-  
 })
-export class ExpandableButtonComponent {}
+export class ExpandableButtonComponent {
+}
